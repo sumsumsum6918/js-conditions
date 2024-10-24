@@ -5,6 +5,7 @@ body {
   padding: 20px 0px 0px 50px;
 }
 
-div {
-  margin: 20px 0px;
+.exercise-wrap {
+  border-top: 4px solid antiquewhite;
+  padding: 30px 20px;
 }

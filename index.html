@@ -8,47 +8,57 @@
   </head>
   <body>
     <h1>Exercises for JS conditions</h1>
-    <div id="greeting-user"></div>
+    <div class="exercise-wrap">
+      <div id="greeting-user">Hello, welcome to my exercises!</div>
+    </div>
 
-    <form onsubmit="compareAlphabets();return false">
-      <label for="alphabet-1">Compare Words:</label>
-      <input
-        type="text"
-        id="alphabet-1"
-        placeholder="Enter one word"
-        required
-      />
-      <input
-        type="text"
-        id="alphabet-2"
-        placeholder="Enter one word"
-        required
-      />
+    <div class="exercise-wrap">
+      <form onsubmit="compareAlphabets();return false">
+        <label for="alphabet-1">Compare Words:</label>
+        <input
+          type="text"
+          id="alphabet-1"
+          placeholder="Enter one word"
+          required
+        />
+        <input
+          type="text"
+          id="alphabet-2"
+          placeholder="Enter one word"
+          required
+        />
 
-      <button type="submit">Compare</button>
-    </form>
-    <div id="display-smaller-alphabet"></div>
+        <button type="submit">Compare</button>
+      </form>
+      <div id="display-smaller-alphabet"></div>
+    </div>
 
-    <form onsubmit="ageConfirm();return false">
-      <label for="age-input">How old are you?</label>
-      <input
-        type="number"
-        max="120"
-        min="0"
-        id="age-input"
-        placeholder="Age"
-        required
-      />
-      <button type="submit">Submit</button>
-    </form>
-    <div id="display-age-confirmation"></div>
+    <div class="exercise-wrap">
+      <form onsubmit="ageConfirm();return false">
+        <label for="age-input">How old are you?</label>
+        <input
+          type="number"
+          max="120"
+          min="0"
+          id="age-input"
+          placeholder="Age"
+          required
+        />
+        <button type="submit">Submit</button>
+      </form>
+      <div id="display-age-confirmation"></div>
+    </div>
 
-    <form onsubmit="guessAnimal();return false">
-      <label for="animal-input">Guess my favourite animal</label>
-      <input type="text" id="animal-input" placeholder="Enter an animal" />
-      <button type="submit">Guess</button>
-    </form>
-    <div id="display-guess-result"></div>
+    <div class="exercise-wrap">
+      <form onsubmit="guessAnimal();return false">
+        <label for="animal-input">Guess my favourite animal</label>
+        <input type="text" id="animal-input" placeholder="Enter an animal" />
+        <button type="submit">Guess</button>
+      </form>
+      <div id="display-guess-result"></div>
+    </div>
+
+    <div class="exercise-wrap"></div>
 
     <script src="main.js"></script>
   </body>
