@@ -110,6 +110,37 @@
       <div id="display-test-comment"></div>
     </div>
 
+    <div class="exercise-wrap">
+      <form>
+        <p>How's the weather today?</p>
+        <input
+          type="radio"
+          name="today_weather"
+          id="sunny"
+          value="sunny"
+          onclick="weatherActivities(this.value)"
+        />
+        <label for="sunny">Sunny</label>
+        <input
+          type="radio"
+          name="today_weather"
+          id="rainy"
+          value="rainy"
+          onclick="weatherActivities(this.value)"
+        />
+        <label for="rainy">Rainy</label>
+        <input
+          type="radio"
+          name="today_weather"
+          id="cloudy"
+          value="cloudy"
+          onclick="weatherActivities(this.value)"
+        />
+        <label for="cloudy">Cloudy</label>
+      </form>
+      <div id="display-activities-suggestion"></div>
+    </div>
+
     <script src="main.js"></script>
   </body>
 </html>

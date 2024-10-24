@@ -18,7 +18,7 @@ function compareAlphabets() {
 
   const firstWord = getCompareIndex(word1, word2);
 
-  displayWord.innerHTML = `The word that appears first in the dictionary is ${firstWord}`;
+  displayWord.innerHTML = `The word that appears first in the dictionary is ${firstWord}.`;
 }
 
 function getCompareIndex(word1, word2) {
@@ -85,5 +85,18 @@ function passingTest() {
     testComment.innerHTML = "Maybe take a break from it and try again later.";
   } else if (testScore >= 90) {
     testComment.innerHTML = "You have slayed it!";
+  }
+}
+
+function weatherActivities(weather) {
+  const displayActivitiesSuggestion = document.getElementById(
+    "display-activities-suggestion"
+  );
+  if (weather === "sunny") {
+    displayActivitiesSuggestion.innerHTML = "Let's go fishing.";
+  } else if (weather === "rainy") {
+    displayActivitiesSuggestion.innerHTML = "Let's watch netflix at home.";
+  } else if (weather === "cloudy") {
+    displayActivitiesSuggestion.innerHTML = "Let's be cuddle with cat.";
   }
 }
