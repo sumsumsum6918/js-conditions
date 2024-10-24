@@ -115,3 +115,14 @@ function responseInLanguages(language) {
     comment.innerHTML = "言わぬが花";
   }
 }
+
+function dividedBy5() {
+  const number = document.getElementById("number-input").value;
+  const comment = document.getElementById("display-dividing-response");
+
+  if (number % 5 === 0) {
+    comment.innerHTML = `${number} can be divided by 5.`;
+  } else {
+    comment.innerHTML = `${number} cannot be divided by 5.`;
+  }
+}
