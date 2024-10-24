@@ -1,11 +1,11 @@
-let userName = prompt("Hi! What's your name?", "Poopoo Cat");
+// let userName = prompt("Hi! What's your name?", "Poopoo Cat");
 
-if (userName != null) {
-  const greetingLines = `Hello ${userName}, welcome to the world!`;
+// if (userName != null) {
+//   const greetingLines = `Hello ${userName}, welcome to my exercises!`;
 
-  document.getElementById("greeting-user").innerHTML = greetingLines;
-  console.log(greetingLines);
-}
+//   document.getElementById("greeting-user").innerHTML = greetingLines;
+//   console.log(greetingLines);
+// }
 
 function compareAlphabets() {
   const word1 = document.getElementById("alphabet-1").value;
@@ -31,5 +31,16 @@ function getCompareIndex(word1, word2) {
     return word1;
   } else if (orderIndex > 0) {
     return word2;
+  }
+}
+
+function ageConfirm() {
+  const ageInputValue = document.getElementById("age-input").value;
+  const ageDisplayElement = document.getElementById("display-age-confirmation");
+
+  if (ageInputValue < 18) {
+    ageDisplayElement.innerHTML = "You are identified as a kid!";
+  } else if (ageInputValue <= 18) {
+    ageDisplayElement.innerHTML = "You are identified as an adult!";
   }
 }

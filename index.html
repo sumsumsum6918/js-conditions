@@ -11,6 +11,7 @@
     <div id="greeting-user"></div>
 
     <form onsubmit="compareAlphabets();return false">
+      <label for="alphabet-1">Compare Words:</label>
       <input
         type="text"
         id="alphabet-1"
@@ -24,10 +25,23 @@
         required
       />
 
-      <button type="submit">Compare words</button>
+      <button type="submit">Compare</button>
     </form>
     <div id="display-smaller-alphabet"></div>
 
+    <form onsubmit="ageConfirm();return false">
+      <label for="age-input">How old are you?</label>
+      <input
+        type="number"
+        max="120"
+        min="0"
+        id="age-input"
+        placeholder="Age"
+        required
+      />
+      <button type="submit">Submit</button>
+    </form>
+    <div id="display-age-confirmation"></div>
     <script src="main.js"></script>
   </body>
 </html>
