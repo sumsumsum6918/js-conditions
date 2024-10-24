@@ -3,7 +3,7 @@
 // if (userName != null) {
 //   const greetingLines = `Hello ${userName}, welcome to my exercises!`;
 
-//   document.getElementById("greeting-user").innerHTML = greetingLines;
+//   document.getElementById("response-1").innerHTML = greetingLines;
 //   console.log(greetingLines);
 // }
 
