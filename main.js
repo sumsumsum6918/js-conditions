@@ -44,3 +44,21 @@ function ageConfirm() {
     ageDisplayElement.innerHTML = "You are identified as an adult!";
   }
 }
+
+function guessAnimal() {
+  const animalInput = document
+    .getElementById("animal-input")
+    .value.toLowerCase();
+  const guessResult = document.getElementById("display-guess-result");
+
+  if (animalInput === "cat" || animalInput === "cats") {
+    guessResult.innerHTML = "You are correct! Cats are the best!";
+  } else if (animalInput === "katt" || animalInput === "katter") {
+    guessResult.innerHTML = "You are correct! Cats are the best!";
+  } else if (animalInput === "kitten" || animalInput === "kitty") {
+    guessResult.innerHTML =
+      "You are correct! But grown up cats are adorable too!";
+  } else {
+    guessResult.innerHTML = "Shame on you! Cats should be everyones favourite.";
+  }
+}
