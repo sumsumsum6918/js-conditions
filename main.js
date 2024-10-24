@@ -74,3 +74,16 @@ function colorComment(color) {
     displayColorComment.innerHTML = "Many cats have emerald like green eyes.";
   }
 }
+
+function passingTest() {
+  const testScore = document.getElementById("test-result").value;
+  const testComment = document.getElementById("display-test-comment");
+
+  if (testScore >= 50 && testScore < 90) {
+    testComment.innerHTML = "Well done! Be proud of yourself!";
+  } else if (testScore < 50) {
+    testComment.innerHTML = "Maybe take a break from it and try again later.";
+  } else if (testScore >= 90) {
+    testComment.innerHTML = "You have slayed it!";
+  }
+}

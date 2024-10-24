@@ -55,7 +55,7 @@
         <input
           type="text"
           id="animal-input"
-          placeholder="Enter an animal"
+          placeholder="Guess an animal"
           required
         />
         <button type="submit">Guess</button>
@@ -92,6 +92,22 @@
         <label for="green">Green</label>
         <div id="display-color-comment"></div>
       </form>
+    </div>
+
+    <div class="exercise-wrap">
+      <form onsubmit="passingTest();return false">
+        <label for="test-result">What did you score for your last test?</label>
+        <input
+          type="number"
+          id="test-result"
+          min="0"
+          max="100"
+          required
+          placeholder="Score"
+        />
+        <button type="submit">Submit</button>
+      </form>
+      <div id="display-test-comment"></div>
     </div>
 
     <script src="main.js"></script>
