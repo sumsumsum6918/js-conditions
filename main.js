@@ -10,7 +10,7 @@
 function compareAlphabets() {
   const word1 = document.getElementById("alphabet-1").value;
   const word2 = document.getElementById("alphabet-2").value;
-  const displayWord = document.getElementById("display-smaller-alphabet");
+  const displayWord = document.getElementById("response-2");
 
   if (word1 === word2) {
     return (displayWord.innerHTML = `${word1} and ${word2} are the same words`);
@@ -22,7 +22,7 @@ function compareAlphabets() {
 }
 
 function getCompareIndex(word1, word2) {
-  const displayWord = document.getElementById("display-smaller-alphabet");
+  const displayWord = document.getElementById("response-2");
 
   const orderIndex = word1.localeCompare(word2);
   console.log(orderIndex);
@@ -36,7 +36,7 @@ function getCompareIndex(word1, word2) {
 
 function ageConfirm() {
   const ageInputValue = document.getElementById("age-input").value;
-  const ageDisplayElement = document.getElementById("display-age-confirmation");
+  const ageDisplayElement = document.getElementById("response-3");
 
   if (ageInputValue < 18) {
     ageDisplayElement.innerHTML = "You are identified as a kid!";
@@ -49,7 +49,7 @@ function guessAnimal() {
   const animalInput = document
     .getElementById("animal-input")
     .value.toLowerCase();
-  const guessResult = document.getElementById("display-guess-result");
+  const guessResult = document.getElementById("response-4");
 
   if (animalInput === "cat" || animalInput === "cats") {
     guessResult.innerHTML = "You are correct! Cats are the best!";
@@ -64,7 +64,7 @@ function guessAnimal() {
 }
 
 function colorComment(color) {
-  const displayColorComment = document.getElementById("display-color-comment");
+  const displayColorComment = document.getElementById("response-5");
   if (color === "red") {
     displayColorComment.innerHTML =
       "I like red too. More precisely ginger cats.";
@@ -77,7 +77,7 @@ function colorComment(color) {
 
 function passingTest() {
   const testScore = document.getElementById("test-result").value;
-  const testComment = document.getElementById("display-test-comment");
+  const testComment = document.getElementById("response-6");
 
   if (testScore >= 50 && testScore < 90) {
     testComment.innerHTML = "Well done! Be proud of yourself!";
@@ -89,9 +89,7 @@ function passingTest() {
 }
 
 function weatherActivities(weather) {
-  const displayActivitiesSuggestion = document.getElementById(
-    "display-activities-suggestion"
-  );
+  const displayActivitiesSuggestion = document.getElementById("response-7");
   if (weather === "sunny") {
     displayActivitiesSuggestion.innerHTML = "Let's go fishing.";
   } else if (weather === "rainy") {
@@ -102,7 +100,7 @@ function weatherActivities(weather) {
 }
 
 function responseInLanguages(language) {
-  const comment = document.getElementById("display-language-response");
+  const comment = document.getElementById("response-8");
 
   if (language === "english") {
     comment.innerHTML =
@@ -118,11 +116,21 @@ function responseInLanguages(language) {
 
 function dividedBy5() {
   const number = document.getElementById("number-input").value;
-  const comment = document.getElementById("display-dividing-response");
+  const comment = document.getElementById("response-9");
 
   if (number % 5 === 0) {
     comment.innerHTML = `${number} can be divided by 5.`;
   } else {
     comment.innerHTML = `${number} cannot be divided by 5.`;
   }
+}
+
+function goOut() {
+  let text;
+  if (confirm("Do you want to go out with my cat?") == true) {
+    text = "You shall get walked by cat.";
+  } else {
+    text = "Cat is staring at you";
+  }
+  document.getElementById("response-10").innerHTML = text;
 }
