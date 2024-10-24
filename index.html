@@ -52,13 +52,47 @@
     <div class="exercise-wrap">
       <form onsubmit="guessAnimal();return false">
         <label for="animal-input">Guess my favourite animal</label>
-        <input type="text" id="animal-input" placeholder="Enter an animal" />
+        <input
+          type="text"
+          id="animal-input"
+          placeholder="Enter an animal"
+          required
+        />
         <button type="submit">Guess</button>
       </form>
       <div id="display-guess-result"></div>
     </div>
 
-    <div class="exercise-wrap"></div>
+    <div class="exercise-wrap">
+      <form>
+        <p>What's your favourite colour?</p>
+        <input
+          type="radio"
+          name="fav-color"
+          id="red"
+          value="red"
+          onclick="colorComment(this.value)"
+        />
+        <label for="red">Red</label>
+        <input
+          type="radio"
+          name="fav-color"
+          id="blue"
+          value="blue"
+          onclick="colorComment(this.value)"
+        />
+        <label for="blue">Blue</label>
+        <input
+          type="radio"
+          name="fav-color"
+          id="green"
+          value="green"
+          onclick="colorComment(this.value)"
+        />
+        <label for="green">Green</label>
+        <div id="display-color-comment"></div>
+      </form>
+    </div>
 
     <script src="main.js"></script>
   </body>

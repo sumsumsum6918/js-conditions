@@ -62,3 +62,15 @@ function guessAnimal() {
     guessResult.innerHTML = "Shame on you! Cats should be everyones favourite.";
   }
 }
+
+function colorComment(color) {
+  const displayColorComment = document.getElementById("display-color-comment");
+  if (color === "red") {
+    displayColorComment.innerHTML =
+      "I like red too. More precisely ginger cats.";
+  } else if (color === "blue") {
+    displayColorComment.innerHTML = "Russian Cats has the nicest blue fur!";
+  } else if (color === "green") {
+    displayColorComment.innerHTML = "Many cats have emerald like green eyes.";
+  }
+}
