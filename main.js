@@ -100,3 +100,18 @@ function weatherActivities(weather) {
     displayActivitiesSuggestion.innerHTML = "Let's be cuddle with cat.";
   }
 }
+
+function responseInLanguages(language) {
+  const comment = document.getElementById("display-language-response");
+
+  if (language === "english") {
+    comment.innerHTML =
+      "Did you know the word 'pneumonoultramicroscopicsilicovolcanoconiosis'?";
+  } else if (language === "swedish") {
+    comment.innerHTML = "Borta bra, men hemma bäst.";
+  } else if (language === "spanish") {
+    comment.innerHTML = "Me importa un pepino";
+  } else if (language === "japanese") {
+    comment.innerHTML = "言わぬが花";
+  }
+}

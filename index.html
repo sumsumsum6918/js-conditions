@@ -141,6 +141,45 @@
       <div id="display-activities-suggestion"></div>
     </div>
 
+    <div class="exercise-wrap">
+      <form>
+        <p>What languages do you speak?</p>
+        <input
+          type="radio"
+          name="language"
+          id="english"
+          value="english"
+          onclick="responseInLanguages(this.value)"
+        />
+        <label for="english">English</label>
+        <input
+          type="radio"
+          name="language"
+          id="swedish"
+          value="swedish"
+          onclick="responseInLanguages(this.value)"
+        />
+        <label for="swedish">Swedish</label>
+        <input
+          type="radio"
+          name="language"
+          id="spanish"
+          value="spanish"
+          onclick="responseInLanguages(this.value)"
+        />
+        <label for="spanish">Spanish</label>
+        <input
+          type="radio"
+          name="language"
+          id="japanese"
+          value="japanese"
+          onclick="responseInLanguages(this.value)"
+        />
+        <label for="japanese">Japanese</label>
+      </form>
+      <div id="display-language-response"></div>
+    </div>
+
     <script src="main.js"></script>
   </body>
 </html>
