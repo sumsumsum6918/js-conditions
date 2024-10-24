@@ -1,11 +1,11 @@
-// let userName = prompt("Hi! What's your name?", "Poopoo Cat");
+let userName = prompt("Hi! What's your name?", "Poopoo Cat");
 
-// if (userName != null) {
-//   const greetingLines = `Hello ${userName}, welcome to the world!`;
+if (userName != null) {
+  const greetingLines = `Hello ${userName}, welcome to the world!`;
 
-//   document.getElementById("greeting-user").innerHTML = greetingLines;
-//   console.log(greetingLines);
-// }
+  document.getElementById("greeting-user").innerHTML = greetingLines;
+  console.log(greetingLines);
+}
 
 function compareAlphabets() {
   const word1 = document.getElementById("alphabet-1").value;
