@@ -205,7 +205,7 @@
     </div>
 
     <div class="exercise-wrap">
-      <h3>Siffra eller bokstav?</h3>
+      <h3>11. Siffra eller bokstav?</h3>
       <form onsubmit="numberOrLetter();return false">
         <label for="character-input">Enter a letter or a number</label>
         <input
@@ -218,6 +218,18 @@
         <button type="submit">Submit</button>
       </form>
       <div id="response-11"></div>
+    </div>
+
+    <div class="exercise-wrap">
+      <h3>12. Största av tre ord</h3>
+      <form onsubmit="compareThreeWords();return false">
+        <label for="word-1">Enter three different words</label>
+        <input type="text" id="word-1" required />
+        <input type="text" id="word-2" required />
+        <input type="text" id="word-3" required />
+        <button type="submit">Submit</button>
+      </form>
+      <div id="response-12"></div>
     </div>
     <script src="main.js"></script>
   </body>

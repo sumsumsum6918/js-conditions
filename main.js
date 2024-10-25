@@ -147,3 +147,32 @@ function numberOrLetter() {
     comment.innerHTML = `${character.toUpperCase()} is a letter.`;
   }
 }
+
+function compareThreeWords() {
+  const word1 = document.getElementById("word-1").value;
+  const word1Length = document.getElementById("word-1").value.length;
+
+  const word2 = document.getElementById("word-2").value;
+  const word2Length = document.getElementById("word-2").value.length;
+
+  const word3 = document.getElementById("word-3").value;
+  const word3Length = document.getElementById("word-3").value.length;
+
+  const comment = document.getElementById("response-12");
+
+  if (word1Length > word2Length && word1Length > word3Length) {
+    comment.innerHTML = `${word1} is the longest word.`;
+  } else if (word2Length > word1Length && word2Length > word3Length) {
+    comment.innerHTML = `${word2} is the longest word.`;
+  } else if (word3Length > word2Length && word3Length > word1Length) {
+    comment.innerHTML = `${word3} is the longest word.`;
+  } else if (word1Length === word2Length && word1Length > word3Length) {
+    comment.innerHTML = `${word1} and ${word2} are both the longest words.`;
+  } else if (word1Length === word3Length && word1Length > word2Length) {
+    comment.innerHTML = `${word1} and ${word3} are both the longest words.`;
+  } else if (word2Length === word3Length && word2Length > word1Length) {
+    comment.innerHTML = `${word2} and ${word3} are both the longest words.`;
+  } else if (word1Length === word2Length && word2Length === word3Length) {
+    comment.innerHTML = `${word1},${word2} and ${word3} are all similarily long words.`;
+  }
+}
