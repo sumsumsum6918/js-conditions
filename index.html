@@ -264,7 +264,22 @@
       </div>
     </div>
 
-    <div class="exercise-wrap"></div>
+    <div class="exercise-wrap">
+      <h3>14. Ålderskategori</h3>
+      <form onsubmit="ageGrouping();return false">
+        <label for="age">Enter your age:</label>
+        <input
+          type="number"
+          name="age"
+          id="age"
+          placeholder="age"
+          max="120"
+          min="0"
+        />
+        <button type="submit">Submit</button>
+      </form>
+      <div id="response-14"></div>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>

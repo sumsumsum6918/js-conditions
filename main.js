@@ -221,3 +221,18 @@ function showChecklist() {
 
   previousTimeoutId = timeoutId;
 }
+
+function ageGrouping() {
+  const age = document.getElementById("age").value;
+  const comment = document.getElementById("response-14");
+
+  if (age >= 0 && age < 13) {
+    comment.innerHTML = "Kid";
+  } else if (age >= 13 && age < 20) {
+    comment.innerHTML = "Teenager";
+  } else if (age >= 20 && age < 65) {
+    comment.innerHTML = "Adult";
+  } else if (age >= 65) {
+    comment.innerHTML = "Retired";
+  }
+}
