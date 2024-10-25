@@ -38,7 +38,7 @@ function ageConfirm() {
 
   if (ageInputValue < 18) {
     comment.innerHTML = "You are identified as a kid!";
-  } else if (ageInputValue <= 18) {
+  } else if (ageInputValue >= 18) {
     comment.innerHTML = "You are identified as an adult!";
   }
 }
