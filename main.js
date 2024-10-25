@@ -236,3 +236,23 @@ function ageGrouping() {
     comment.innerHTML = "Retired";
   }
 }
+
+function areYouCat() {
+  let text;
+  if (confirm("Would you like to be a cat?") == true) {
+    if (confirm("Is Poopoo a cat?") == true) {
+      text = "You are now worthy to be a cat.";
+    } else {
+      text = "Poopoo is in fact the cutest cat.";
+    }
+  } else {
+    if (confirm("Would you like to be a rabbit?") == true) {
+      text =
+        "Rabbit meat is high in protein and low in fat, making it ideal for cats.";
+    } else {
+      text = "Boof?";
+    }
+  }
+
+  document.getElementById("response-15").innerHTML = text;
+}
