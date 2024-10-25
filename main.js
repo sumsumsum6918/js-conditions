@@ -176,3 +176,48 @@ function compareThreeWords() {
     comment.innerHTML = `${word1},${word2} and ${word3} are all similarily long words.`;
   }
 }
+
+function showPassword() {
+  const showPasswordButton = document.querySelector(".show-password");
+  const passwordInput = document.querySelector(".password-input");
+
+  showPasswordButton.classList.toggle("fa-eye");
+  showPasswordButton.classList.toggle("fa-eye-slash");
+  passwordInput.type = passwordInput.type === "password" ? "text" : "password";
+}
+
+function validatePassword() {
+  const passwordInput = document.querySelector(".password-input");
+
+  const passwordChecklist = document.querySelectorAll(".list-item");
+  const validationRegex = [{ regex: /.{8,}/ }, { regex: /[0-9]/ }];
+
+  validationRegex.forEach((item, i) => {
+    let isValid = item.regex.test(passwordInput.value);
+
+    if (isValid) {
+      passwordChecklist[i].classList.add("checked");
+    } else {
+      passwordChecklist[i].classList.remove("checked");
+    }
+  });
+}
+
+let previousTimeoutId;
+function showChecklist() {
+  document
+    .querySelector(".password-checklist")
+    .classList.add("password-checklist-active");
+
+  if (previousTimeoutId) {
+    clearTimeout(previousTimeoutId);
+  }
+
+  const timeoutId = setTimeout(() => {
+    document
+      .querySelector(".password-checklist")
+      .classList.remove("password-checklist-active");
+  }, 15000);
+
+  previousTimeoutId = timeoutId;
+}

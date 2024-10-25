@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS Conditions</title>
     <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="password.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
   <body>
     <h1>Exercises for JS conditions</h1>
@@ -231,6 +236,35 @@
       </form>
       <div id="response-12"></div>
     </div>
+
+    <div class="exercise-wrap">
+      <h3>13. Lösenordskontroll</h3>
+      <div class="password-input-box">
+        <input
+          type="password"
+          name="password"
+          id="password"
+          class="password-input"
+          placeholder="password"
+          required
+          onclick="showChecklist()"
+        />
+        <i class="fa-solid fa-eye show-password" onclick="showPassword()"></i>
+        <button class="check-password-button" onclick="validatePassword()">
+          Check
+        </button>
+        <div class="password-checklist">
+          <h4 class="checklist-title">Password should be</h4>
+
+          <ul class="checklist">
+            <li class="list-item">At least 8 character long</li>
+            <li class="list-item">At least 1 number</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="exercise-wrap"></div>
     <script src="main.js"></script>
   </body>
 </html>
