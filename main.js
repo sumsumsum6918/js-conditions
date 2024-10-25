@@ -10,20 +10,18 @@
 function compareAlphabets() {
   const word1 = document.getElementById("alphabet-1").value;
   const word2 = document.getElementById("alphabet-2").value;
-  const displayWord = document.getElementById("response-2");
+  const comment = document.getElementById("response-2");
 
   if (word1 === word2) {
-    return (displayWord.innerHTML = `${word1} and ${word2} are the same words`);
+    return (comment.innerHTML = `${word1} and ${word2} are the same words`);
   }
 
   const firstWord = getCompareIndex(word1, word2);
 
-  displayWord.innerHTML = `The word that appears first in the dictionary is ${firstWord}.`;
+  comment.innerHTML = `The word that appears first in the dictionary is ${firstWord}.`;
 }
 
 function getCompareIndex(word1, word2) {
-  const displayWord = document.getElementById("response-2");
-
   const orderIndex = word1.localeCompare(word2);
   console.log(orderIndex);
 
@@ -36,12 +34,12 @@ function getCompareIndex(word1, word2) {
 
 function ageConfirm() {
   const ageInputValue = document.getElementById("age-input").value;
-  const ageDisplayElement = document.getElementById("response-3");
+  const comment = document.getElementById("response-3");
 
   if (ageInputValue < 18) {
-    ageDisplayElement.innerHTML = "You are identified as a kid!";
+    comment.innerHTML = "You are identified as a kid!";
   } else if (ageInputValue <= 18) {
-    ageDisplayElement.innerHTML = "You are identified as an adult!";
+    comment.innerHTML = "You are identified as an adult!";
   }
 }
 
@@ -49,53 +47,54 @@ function guessAnimal() {
   const animalInput = document
     .getElementById("animal-input")
     .value.toLowerCase();
-  const guessResult = document.getElementById("response-4");
+  const comment = document.getElementById("response-4");
 
   if (animalInput === "cat" || animalInput === "cats") {
-    guessResult.innerHTML = "You are correct! Cats are the best!";
+    comment.innerHTML = "You are correct! Cats are the best!";
   } else if (animalInput === "katt" || animalInput === "katter") {
-    guessResult.innerHTML = "You are correct! Cats are the best!";
+    comment.innerHTML = "You are correct! Cats are the best!";
   } else if (animalInput === "kitten" || animalInput === "kitty") {
-    guessResult.innerHTML =
-      "You are correct! But grown up cats are adorable too!";
+    comment.innerHTML = "You are correct! But grown up cats are adorable too!";
+  } else if (animalInput === "kittens" || animalInput === "kitties") {
+    comment.innerHTML = "You are correct! But grown up cats are adorable too!";
   } else {
-    guessResult.innerHTML = "Shame on you! Cats should be everyones favourite.";
+    comment.innerHTML = "Shame on you! Cats should be everyones favourite.";
   }
 }
 
 function colorComment(color) {
-  const displayColorComment = document.getElementById("response-5");
+  const comment = document.getElementById("response-5");
   if (color === "red") {
-    displayColorComment.innerHTML =
-      "I like red too. More precisely ginger cats.";
+    comment.innerHTML = "I like red too. More precisely ginger cats.";
   } else if (color === "blue") {
-    displayColorComment.innerHTML = "Russian Cats has the nicest blue fur!";
+    comment.innerHTML = "Russian Cats has the nicest blue fur!";
   } else if (color === "green") {
-    displayColorComment.innerHTML = "Many cats have emerald like green eyes.";
+    comment.innerHTML = "Many cats have emerald like green eyes.";
   }
 }
 
 function passingTest() {
   const testScore = document.getElementById("test-result").value;
-  const testComment = document.getElementById("response-6");
+  const comment = document.getElementById("response-6");
 
   if (testScore >= 50 && testScore < 90) {
-    testComment.innerHTML = "Well done! Be proud of yourself!";
+    comment.innerHTML = "Well done! Be proud of yourself!";
   } else if (testScore < 50) {
-    testComment.innerHTML = "Maybe take a break from it and try again later.";
+    comment.innerHTML = "Maybe take a break from it and try again later.";
   } else if (testScore >= 90) {
-    testComment.innerHTML = "You have slayed it!";
+    comment.innerHTML = "You have slayed it!";
   }
 }
 
 function weatherActivities(weather) {
-  const displayActivitiesSuggestion = document.getElementById("response-7");
+  const comment = document.getElementById("response-7");
+
   if (weather === "sunny") {
-    displayActivitiesSuggestion.innerHTML = "Let's go fishing.";
+    comment.innerHTML = "Let's go fishing.";
   } else if (weather === "rainy") {
-    displayActivitiesSuggestion.innerHTML = "Let's watch netflix at home.";
+    comment.innerHTML = "Let's watch netflix at home.";
   } else if (weather === "cloudy") {
-    displayActivitiesSuggestion.innerHTML = "Let's be cuddle with cat.";
+    comment.innerHTML = "Let's be cuddle with cat.";
   }
 }
 
@@ -133,4 +132,18 @@ function goOut() {
     text = "Cat is staring at you";
   }
   document.getElementById("response-10").innerHTML = text;
+}
+
+function numberOrLetter() {
+  const comment = document.getElementById("response-11");
+  const character = document.getElementById("character-input").value;
+
+  if (character >= 0 && character <= 9) {
+    comment.innerHTML = `${character} is a number.`;
+  } else if (
+    (character >= "a" && character <= "ö") ||
+    (character >= "A" && character <= "Ö")
+  ) {
+    comment.innerHTML = `${character.toUpperCase()} is a letter.`;
+  }
 }

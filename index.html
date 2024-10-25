@@ -9,10 +9,12 @@
   <body>
     <h1>Exercises for JS conditions</h1>
     <div class="exercise-wrap">
+      <h3>1.Hälsa användaren</h3>
       <div id="response-1">Hello, welcome to my exercises!</div>
     </div>
 
     <div class="exercise-wrap">
+      <h3>2. Jämför två ord</h3>
       <form onsubmit="compareAlphabets();return false">
         <label for="alphabet-1">Compare Words:</label>
         <input
@@ -34,6 +36,7 @@
     </div>
 
     <div class="exercise-wrap">
+      <h3>3. Är användaren vuxen?</h3>
       <form onsubmit="ageConfirm();return false">
         <label for="age-input">How old are you?</label>
         <input
@@ -50,6 +53,7 @@
     </div>
 
     <div class="exercise-wrap">
+      <h3>4. Gissa ett djur</h3>
       <form onsubmit="guessAnimal();return false">
         <label for="animal-input">Guess my favourite animal</label>
         <input
@@ -64,6 +68,7 @@
     </div>
 
     <div class="exercise-wrap">
+      <h3>5. Känn igen en färg</h3>
       <form>
         <p>What's your favourite colour?</p>
         <input
@@ -95,6 +100,7 @@
     </div>
 
     <div class="exercise-wrap">
+      <h3>6. Godkänd eller inte</h3>
       <form onsubmit="passingTest();return false">
         <label for="test-result">What did you score for your last test?</label>
         <input
@@ -111,6 +117,7 @@
     </div>
 
     <div class="exercise-wrap">
+      <h3>7. Vad ska vi göra idag?</h3>
       <form>
         <p>How's the weather today?</p>
         <input
@@ -142,6 +149,7 @@
     </div>
 
     <div class="exercise-wrap">
+      <h3>8. Vilket språk talar du?</h3>
       <form>
         <p>What languages do you speak?</p>
         <input
@@ -181,6 +189,7 @@
     </div>
 
     <div class="exercise-wrap">
+      <h3>9. Multipel av 5?</h3>
       <form onsubmit="dividedBy5();return false">
         <label for="number-input">Can it get divided by 5?</label>
         <input type="number" min="0" placeholder="number" id="number-input" />
@@ -190,10 +199,26 @@
     </div>
 
     <div class="exercise-wrap">
+      <h3>10. Ska vi gå ut?</h3>
       <button onclick="goOut()">Ask my cat.</button>
       <div id="response-10"></div>
     </div>
 
+    <div class="exercise-wrap">
+      <h3>Siffra eller bokstav?</h3>
+      <form onsubmit="numberOrLetter();return false">
+        <label for="character-input">Enter a letter or a number</label>
+        <input
+          type="text"
+          id="character-input"
+          placeholder="Enter one character"
+          maxlength="1"
+          required
+        />
+        <button type="submit">Submit</button>
+      </form>
+      <div id="response-11"></div>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>
